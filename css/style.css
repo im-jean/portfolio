@@ -1,0 +1,218 @@
+/* ============================================= */
+/* Variables de colores para facilitar las cosas */
+/* ============================================= */
+:root {
+  /* --- 1. FONDOS Y SUPERFICIES (De más oscuro a más elevado) --- */
+  --bg-profundo: #090D16;      /* [NUEVO] Para pie de página o bloques hundidos */
+  --bg-base: #0F172A;          /* [ORIGINAL] Fondo principal de la página */
+  --bg-tarjeta: #1E293B;       /* [ORIGINAL] Fondo de tarjetas y barra superior */
+  --bg-elevado: #243146;       /* [NUEVO] Sub-cajas o etiquetas dentro de tarjetas */
+  --bg-hover: #273549;         /* [ORIGINAL] Fondo al pasar el cursor (hover) */
+
+  /* --- 2. BORDES Y LÍNEAS DIVISORIAS --- */
+  --borde-sutil: #263244;      /* [NUEVO] Separadores muy discretos */
+  --borde: #334155;            /* [ORIGINAL] Borde estándar de tarjetas y secciones */
+  --borde-activo: #475569;     /* [NUEVO] Borde iluminado al hacer hover/focus */
+
+  /* --- 3. JERARQUÍA DE TEXTOS --- */
+  --texto-principal: #F8FAFC;  /* [ORIGINAL] Títulos y encabezados principales */
+  --texto-cuerpo: #CBD5E1;     /* [NUEVO] Párrafos largos (descansa más la vista) */
+  --texto-secundario: #94A3B8; /* [ORIGINAL] Subtítulos, enlaces y descripciones */
+  --texto-apagado: #64748B;    /* [ORIGINAL] Notas menores, fechas o textos sutiles */
+
+  /* --- 4. ACENTOS PRINCIPALES (Identidad de marca) --- */
+  /* Cian (Color estrella) */
+  --acento-cian: #38BDF8;                    /* [ORIGINAL] */
+  --acento-cian-hover: #7DD3FC;              /* [ORIGINAL] */
+  --acento-cian-suave: rgba(56, 189, 248, 0.12); /* [NUEVO] Fondo traslúcido */
+
+  /* Índigo (Segundo acento) */
+  --acento-indigo: #818CF8;                  /* [ORIGINAL] */
+  --acento-indigo-hover: #A5B4FC;            /* [ORIGINAL] */
+  --acento-indigo-suave: rgba(129, 140, 248, 0.12); /* [NUEVO] Fondo traslúcido */
+
+  /* --- 5. ACENTOS DE CATEGORÍA (Para tarjetas de habilidades/proyectos) --- */
+  /* Esmeralda (Ideal para Backend, Linux, Hardware) */
+  --acento-esmeralda: #34D399;               /* [NUEVO] */
+  --acento-esmeralda-hover: #6EE7B7;         /* [NUEVO] */
+  --acento-esmeralda-suave: rgba(52, 211, 153, 0.12); /* [NUEVO] */
+
+  /* Ámbar (Ideal para JavaScript, Prototipos, En progreso) */
+  --acento-ambar: #FBBF24;                   /* [NUEVO] */
+  --acento-ambar-hover: #FDE68A;             /* [NUEVO] */
+  --acento-ambar-suave: rgba(251, 191, 36, 0.12); /* [NUEVO] */
+
+  /* Coral (Ideal para Game Dev, Diseño, Detalles creativos) */
+  --acento-coral: #FB7185;                   /* [NUEVO] */
+  --acento-coral-hover: #FDA4AF;             /* [NUEVO] */
+  --acento-coral-suave: rgba(251, 113, 133, 0.12); /* [NUEVO] */
+
+  /* --- 6. ESTADOS / ETIQUETAS DE SISTEMA --- */
+  --estado-exito: #34D399;     /* [ORIGINAL] */
+  --estado-progreso: #FBBF24;  /* [ORIGINAL] */
+  --estado-error: #F87171;     /* [ORIGINAL] */
+}
+
+/* =========================*/
+/* Reglas de diseño general */
+/* =========================*/
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: var(--bg-base);
+  color: var(--texto-principal);
+  margin: 0;
+}
+a {
+  text-decoration: none;
+}
+
+/* ================================ */
+/* Estilo de la barra de navegación */
+/* ================================ */
+.cabecera {
+  background-color: var(--bg-tarjeta);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid var(--borde);
+
+  .btn-inicio {
+    font-size: 30px;
+    font-weight: bold;
+    padding: 10px;
+    color: var(--acento-cian);
+    transition: color 0.30s ease;
+
+    &:hover {
+      color: var(--acento-cian-hover);
+      transition: color 0.30s ease;
+    }
+  }
+
+  .btns-info a {
+    color: var(--texto-secundario);
+    transition: color 0.30s ease;
+
+    &:hover {
+      color: var(--texto-apagado);
+      transition: color 0.30s ease;
+    }
+  }
+  .btns-info {
+    display: flex;
+    font-size: 18px;
+    padding: 10px;
+    gap: 10px;
+  }
+}
+
+/* ============================== */
+/* Estilo de la sección de inicio */
+/* ============================== */
+.seccion-inicio {
+  padding: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  border-bottom: 1px solid var(--borde);
+
+  .inicio-saludo,
+  .inicio-nombre,
+  .inicio-presentacion {
+    margin: 0;
+  }
+
+  .inicio-saludo{
+    color: var(--texto-secundario);
+    font-size: 20px;
+  }
+  .inicio-nombre {
+    color: var(--texto-principal);
+    font-size: 50px;
+  }
+  .inicio-presentacion {
+    color: var(--texto-apagado);
+  }
+
+  .inicio-foto-perfil {
+    width: 260px;
+    height: 260px;
+    border-radius: 50%;
+    border: 3px solid var(--borde);
+  }
+}
+
+/* ============================= */
+/* Estilo de la sección sobre mí */
+/* ============================= */
+.seccion-sobre-mi {
+  padding: 20px;
+  border-bottom: 1px solid var(--borde);
+
+  .titulo-sobre-mi {
+    font-size: 35px;
+    text-align: center;
+  }
+
+  .tarjeta-sobre-mi {
+    max-width: 72ch;
+    margin-inline: auto;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: var(--bg-tarjeta);
+    border-radius: 20px;
+    border: 2px solid var(--borde);
+
+    .titulo-pregunta-sobre-mi {
+      color: var(--texto-secundario);
+      font-size: 30px;
+      font-weight: bold;
+      margin-bottom: 0;
+      margin-top: 0;
+    }
+  }
+  .tarjeta-sobre-mi p {
+    line-height: 1.65;
+    color: var(--texto-cuerpo);
+  }
+}
+
+/* ================================= */
+/* Estilo de la sección de Proyectos */
+/* ================================= */
+.seccion-proyectos {
+  padding: 20px;
+  border-bottom: 1px solid var(--borde);
+
+  .titulo-proyectos {
+    font-size: 35px;
+    text-align: center;
+  }
+
+  .contenedor-tarjetas {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+
+    .tarjeta-caja {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+
+      .tarjeta-proyecto {
+        padding: 20px;
+        border: 2px solid var(--borde-activo);
+        border-radius: 10px;
+        background-color: var(--bg-tarjeta);
+      }
+    }
+
+  }
+
+}
