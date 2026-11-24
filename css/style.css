@@ -75,6 +75,7 @@ a {
 .cabecera {
   background-color: var(--bg-tarjeta);
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   border-bottom: 2px solid var(--borde);
@@ -215,4 +216,30 @@ a {
 
   }
 
+}
+
+/* ============================== */
+/* Diseño responsivo para moviles */
+/* ============================== */
+@media (max-width: 768px) {
+  .cabecera {
+    flex-direction: column;
+
+    .btns-info {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+  .seccion-inicio {
+    flex-direction: column;
+    text-align: center;
+    padding: 30px 20px;
+  }
+  .seccion-inicio .inicio-nombre {
+    font-size: 36px;
+  }
+  .seccion-inicio .inicio-foto-perfil {
+    width: 180px;
+    height: 180px;
+  }
 }
