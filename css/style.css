@@ -207,10 +207,20 @@ a {
       gap: 10px;
 
       .tarjeta-proyecto {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         padding: 20px;
         border: 2px solid var(--borde-activo);
         border-radius: 10px;
         background-color: var(--bg-tarjeta);
+        max-width: 20ch;
+      }
+      .descripcion-proyecto-adj {
+        background-color: var(--bg-tarjeta);
+        border-radius: 10px;
+        border: 2px solid var(--borde-activo);
+        padding: 10px;
       }
     }
 
