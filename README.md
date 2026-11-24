@@ -15,5 +15,8 @@ Sitio web personal desarrollado desde cero para presentar mi historia, proyectos
 ## Estado del proyecto
 🚧 En desarrollo activo — Actualmente trabajando en las secciones de Proyectos, Habilidades y adaptación móvil (*Responsive Design*).
 
+## [Notas]
+- Se ha añadido el diseño responsivo básico para móviles. UwU.
+
 ---
 Creado por [@im-jean](https://github.com/im-jean)
