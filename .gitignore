@@ -1,0 +1,7 @@
+# Lista de tareas personales
+listapendiente.txt
+
+# Archivos de sistema y editor
+.DS_Store
+Thumbs.db
+.vscode/

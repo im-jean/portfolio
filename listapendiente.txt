@@ -1,3 +1,0 @@
-1- Mañana 20 de noviembre del 2026 toca arreglas los hovers y asignarle a cada btn de la barra de navegación, su propio cambio. #COMPLETADO.
-
-2- Cuando la pagina este relativamente terminada, entonces hay que colocar un <footer></footer>
